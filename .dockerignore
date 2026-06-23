@@ -1,0 +1,9 @@
+node_modules
+dist
+.git
+.agents
+.codex
+*.log
+vite-dev.log
+vite-dev.err.log
+npm-debug.log*
