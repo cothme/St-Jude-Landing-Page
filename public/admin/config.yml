@@ -1,7 +1,6 @@
-# Replace OWNER with the GitHub organization or user that owns the production repo.
 backend:
   name: github
-  repo: OWNER/st-judes-official-website
+  repo: cothme/St-Jude-Landing-Page
   branch: main
   squash_merges: true
 
@@ -87,7 +86,12 @@ collections:
                 fields:
                   - { name: label, label: Label, widget: string }
                   - { name: href, label: Link, widget: string }
-              - { name: highlights, label: Highlights, widget: list, field: { name: item, label: Highlight, widget: string } }
+              - {
+                  name: highlights,
+                  label: Highlights,
+                  widget: list,
+                  field: { name: item, label: Highlight, widget: string },
+                }
               - name: floatingCard
                 label: Floating Card
                 widget: object
@@ -109,8 +113,18 @@ collections:
                       - { name: label, label: Label, widget: string }
                   - { name: rhythmTitle, label: Rhythm Title, widget: string }
                   - { name: rhythmBadge, label: Rhythm Badge, widget: string }
-                  - { name: rhythmItems, label: Rhythm Items, widget: list, field: { name: item, label: Item, widget: string } }
-                  - { name: values, label: Values, widget: list, field: { name: item, label: Value, widget: string } }
+                  - {
+                      name: rhythmItems,
+                      label: Rhythm Items,
+                      widget: list,
+                      field: { name: item, label: Item, widget: string },
+                    }
+                  - {
+                      name: values,
+                      label: Values,
+                      widget: list,
+                      field: { name: item, label: Value, widget: string },
+                    }
 
           - name: about
             label: About
@@ -118,7 +132,12 @@ collections:
             fields:
               - { name: eyebrow, label: Eyebrow, widget: string }
               - { name: heading, label: Heading, widget: string }
-              - { name: paragraphs, label: Paragraphs, widget: list, field: { name: paragraph, label: Paragraph, widget: text } }
+              - {
+                  name: paragraphs,
+                  label: Paragraphs,
+                  widget: list,
+                  field: { name: paragraph, label: Paragraph, widget: text },
+                }
               - name: principles
                 label: Principles
                 widget: list
@@ -166,7 +185,12 @@ collections:
               - { name: eyebrow, label: Eyebrow, widget: string }
               - { name: heading, label: Heading, widget: string }
               - { name: copy, label: Copy, widget: text }
-              - { name: reasons, label: Reasons, widget: list, field: { name: reason, label: Reason, widget: text } }
+              - {
+                  name: reasons,
+                  label: Reasons,
+                  widget: list,
+                  field: { name: reason, label: Reason, widget: text },
+                }
 
           - name: facilities
             label: Facilities
@@ -196,8 +220,18 @@ collections:
                       - { label: Harbor to Mist, value: harbor-mist }
                       - { label: Sage to Linen, value: sage-linen }
                       - { label: Moss to Cream, value: moss-cream }
-                  - { name: image, label: Photo, widget: image, required: false }
-                  - { name: imageAlt, label: Photo Alt Text, widget: string, required: false }
+                  - {
+                      name: image,
+                      label: Photo,
+                      widget: image,
+                      required: false,
+                    }
+                  - {
+                      name: imageAlt,
+                      label: Photo Alt Text,
+                      widget: string,
+                      required: false,
+                    }
 
           - name: contact
             label: Contact Section
@@ -230,8 +264,22 @@ collections:
                 label: Inquiry Form
                 widget: object
                 fields:
-                  - { name: relationships, label: Relationship Options, widget: list, field: { name: relationship, label: Relationship, widget: string } }
-                  - { name: successMessage, label: Success Message, widget: text }
+                  - {
+                      name: relationships,
+                      label: Relationship Options,
+                      widget: list,
+                      field:
+                        {
+                          name: relationship,
+                          label: Relationship,
+                          widget: string,
+                        },
+                    }
+                  - {
+                      name: successMessage,
+                      label: Success Message,
+                      widget: text,
+                    }
 
           - name: footer
             label: Footer
