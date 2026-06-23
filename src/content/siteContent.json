@@ -1,0 +1,241 @@
+{
+  "site": {
+    "shortName": "St. Jude's",
+    "subtitle": "Psychiatric and Custodial Home",
+    "fullName": "St. Jude's Psychiatric and Custodial Home",
+    "tagline": "Compassionate residential care",
+    "summary": "A calm, respectful place for families seeking psychiatric and custodial care support for a loved one.",
+    "logo": "/stjude-logo.png",
+    "logoAlt": "St. Jude's Psychiatric and Custodial Home logo",
+    "contact": {
+      "phone": "+63 000 000 0000",
+      "phoneHref": "tel:+630000000000",
+      "email": "inquiries@stjudescare.example",
+      "emailHref": "mailto:inquiries@stjudescare.example",
+      "address": "Add complete facility address here"
+    }
+  },
+  "navigation": [
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Services",
+      "href": "#services"
+    },
+    {
+      "label": "Why Us",
+      "href": "#why-us"
+    },
+    {
+      "label": "Facilities",
+      "href": "#facilities"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
+  ],
+  "hero": {
+    "eyebrow": "Calm, safe, and compassionate care",
+    "heading": "Compassionate psychiatric and custodial care in a home-like setting.",
+    "body": "St. Jude's Psychiatric and Custodial Home supports individuals and families with dignified care, professional supervision, and a peaceful environment designed for stability and comfort.",
+    "primaryCta": {
+      "label": "Inquire Now",
+      "href": "#contact"
+    },
+    "secondaryCta": {
+      "label": "View Services",
+      "href": "#services"
+    },
+    "highlights": [
+      "Structured daily routines",
+      "Medication supervision",
+      "Family-centered updates"
+    ],
+    "floatingCard": {
+      "title": "Family reassurance",
+      "copy": "Clear updates and guided visits"
+    },
+    "snapshot": {
+      "eyebrow": "Care Snapshot",
+      "heading": "A steadier place to heal and be cared for.",
+      "stats": [
+        {
+          "value": "24/7",
+          "label": "Supportive supervision"
+        },
+        {
+          "value": "6",
+          "label": "Core care services"
+        }
+      ],
+      "rhythmTitle": "Daily Care Rhythm",
+      "rhythmBadge": "Structured",
+      "rhythmItems": [
+        "Morning wellness check",
+        "Medication and meals",
+        "Rest, recreation, and family coordination"
+      ],
+      "values": [
+        "Safety",
+        "Dignity",
+        "Warmth"
+      ]
+    }
+  },
+  "about": {
+    "eyebrow": "Our mission",
+    "heading": "A caring home for stability, dignity, and daily support.",
+    "paragraphs": [
+      "St. Jude's Psychiatric and Custodial Home exists to provide compassionate residential care for people who need psychiatric support, custodial assistance, medication supervision, and long-term daily structure.",
+      "Our approach balances professional care with a warm, human environment. Families can expect thoughtful communication, calm routines, and a team focused on safety, dignity, and quality of life."
+    ],
+    "principles": [
+      {
+        "icon": "shield",
+        "title": "Safety First",
+        "copy": "A structured environment designed to reduce risk, support stability, and protect every resident."
+      },
+      {
+        "icon": "hands",
+        "title": "Dignified Care",
+        "copy": "Every person is approached with respect, patience, and an understanding of their unique needs."
+      },
+      {
+        "icon": "family",
+        "title": "Family Partnership",
+        "copy": "We help families stay informed and supported through a care journey that can feel difficult to navigate."
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Services",
+    "heading": "Professional support shaped around each resident's daily needs.",
+    "copy": "These core services can be customized as your real program details, licenses, staffing model, and facility policies are finalized.",
+    "items": [
+      {
+        "icon": "brain",
+        "title": "Psychiatric Care",
+        "copy": "Supportive care coordination for residents who need mental health supervision and stability."
+      },
+      {
+        "icon": "home",
+        "title": "Custodial Care",
+        "copy": "Safe residential support for individuals who need ongoing assistance and daily structure."
+      },
+      {
+        "icon": "mobility",
+        "title": "Daily Living Assistance",
+        "copy": "Help with routines, meals, hygiene reminders, mobility support, and comfort throughout the day."
+      },
+      {
+        "icon": "capsules",
+        "title": "Medication Supervision",
+        "copy": "Organized monitoring and reminders to support consistency with prescribed medication schedules."
+      },
+      {
+        "icon": "care",
+        "title": "Long-Term Care",
+        "copy": "A compassionate setting for residents who require extended support and dependable care."
+      },
+      {
+        "icon": "comments",
+        "title": "Family Support",
+        "copy": "Visitation guidance and thoughtful communication that helps loved ones remain connected."
+      }
+    ]
+  },
+  "whyChooseUs": {
+    "eyebrow": "Why choose us",
+    "heading": "A place families can trust during a sensitive season.",
+    "copy": "Choosing care for a loved one can be emotional. Our brand promise is simple: calm support, respectful care, and a safe environment where residents are treated like people first.",
+    "reasons": [
+      "Compassionate staff trained to respond with patience and respect.",
+      "Safe and structured environment with steady routines.",
+      "Personalized care planning for individual needs and family concerns.",
+      "Family-centered communication that keeps loved ones informed.",
+      "Peaceful home-like setting that feels warmer than a clinical ward."
+    ]
+  },
+  "facilities": {
+    "eyebrow": "Facilities and environment",
+    "heading": "Clean, peaceful spaces designed to feel supportive and safe.",
+    "copy": "Replace these placeholders with real facility photos when available. The current layout keeps the page polished while showing the type of atmosphere families should expect.",
+    "spaces": [
+      {
+        "icon": "moon",
+        "title": "Quiet Rest Areas",
+        "copy": "Soft, low-stimulation spaces where residents can rest, reset, and feel secure.",
+        "gradient": "harbor-mist"
+      },
+      {
+        "icon": "sun",
+        "title": "Shared Living Spaces",
+        "copy": "Comfortable common areas that encourage gentle routines, supervision, and connection.",
+        "gradient": "sage-linen"
+      },
+      {
+        "icon": "leaf",
+        "title": "Peaceful Outdoor Feel",
+        "copy": "Nature-inspired design cues and calm corners that make the environment feel more like home.",
+        "gradient": "moss-cream"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Inquiry and contact",
+    "heading": "Start a confidential conversation about care.",
+    "copy": "Share a few details and the St. Jude's team can guide you through availability, visitation policies, admission requirements, and next steps.",
+    "detailCards": [
+      {
+        "icon": "phone",
+        "title": "Phone",
+        "detailKey": "phone"
+      },
+      {
+        "icon": "email",
+        "title": "Email",
+        "detailKey": "email"
+      },
+      {
+        "icon": "location",
+        "title": "Location",
+        "detailKey": "address"
+      }
+    ],
+    "form": {
+      "relationships": [
+        "Parent",
+        "Spouse",
+        "Child",
+        "Sibling",
+        "Guardian",
+        "Other relative"
+      ],
+      "successMessage": "Thank you. This demo form is ready for a backend or email integration."
+    }
+  },
+  "footer": {
+    "links": [
+      {
+        "label": "About",
+        "href": "#about"
+      },
+      {
+        "label": "Services",
+        "href": "#services"
+      },
+      {
+        "label": "Facilities",
+        "href": "#facilities"
+      },
+      {
+        "label": "Inquire",
+        "href": "#contact"
+      }
+    ],
+    "copyright": "All rights reserved."
+  }
+}
