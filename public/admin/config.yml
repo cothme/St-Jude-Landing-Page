@@ -10,8 +10,8 @@ local_backend: true
 publish_mode: editorial_workflow
 media_folder: public/uploads
 public_folder: /uploads
-site_url: https://www.stjudes.example
-display_url: https://www.stjudes.example
+site_url: https://st-jude-landing-page-production.up.railway.app
+display_url: https://st-jude-landing-page-production.up.railway.app
 logo_url: /stjude-logo.png
 locale: en
 
