@@ -57,7 +57,7 @@ collections:
                   - { name: phoneHref, label: Phone Link, widget: string }
                   - { name: email, label: Email Display, widget: string }
                   - { name: emailHref, label: Email Link, widget: string }
-                  - { name: address, label: Address, widget: text }
+                  - { name: address, label: Address, widget: text, required: false }
 
           - name: navigation
             label: Navigation

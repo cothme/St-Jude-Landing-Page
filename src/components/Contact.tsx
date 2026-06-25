@@ -59,6 +59,7 @@ function Contact({ content, site }: ContactProps) {
 
   const errors = useMemo(() => validate(values), [values]);
   const hasErrors = Object.keys(errors).length > 0;
+  const visibleDetailCards = content.detailCards.filter((item) => site.contact[item.detailKey].trim());
 
   const updateField = (field: keyof FormValues, value: string) => {
     setValues((current) => ({ ...current, [field]: value }));
@@ -77,6 +78,7 @@ function Contact({ content, site }: ContactProps) {
 
     if (hasErrors) return;
 
+    window.location.href = buildInquiryMailto(site, values);
     setSubmitted(true);
     setValues(initialValues);
     setTouched({});
@@ -93,7 +95,7 @@ function Contact({ content, site }: ContactProps) {
           <p className="section-copy">{content.copy}</p>
 
           <div className="mt-10 grid gap-4">
-            {content.detailCards.map((item, index) => {
+            {visibleDetailCards.map((item, index) => {
               const Icon = contactIcons[item.icon];
               const detail = site.contact[item.detailKey];
               return (
@@ -115,79 +117,79 @@ function Contact({ content, site }: ContactProps) {
 
         <Reveal delay={120}>
           <form onSubmit={handleSubmit} noValidate className="rounded-[2rem] border border-moss/10 bg-cream p-5 shadow-lift sm:p-8">
-          {/* Customize this form handler when connecting to email, CRM, or backend inquiry storage. */}
-          <div className="grid gap-5 sm:grid-cols-2">
-            <Field
-              label="Full name"
-              value={values.fullName}
-              error={showError('fullName') ? errors.fullName : undefined}
-              onBlur={() => setTouched((current) => ({ ...current, fullName: true }))}
-              onChange={(value) => updateField('fullName', value)}
-              placeholder="Juan Dela Cruz"
-            />
-            <Field
-              label="Contact number"
-              value={values.phone}
-              error={showError('phone') ? errors.phone : undefined}
-              onBlur={() => setTouched((current) => ({ ...current, phone: true }))}
-              onChange={(value) => updateField('phone', value)}
-              placeholder="+63 900 000 0000"
-              inputMode="tel"
-            />
-            <Field
-              label="Email"
-              value={values.email}
-              error={showError('email') ? errors.email : undefined}
-              onBlur={() => setTouched((current) => ({ ...current, email: true }))}
-              onChange={(value) => updateField('email', value)}
-              placeholder="name@email.com"
-              type="email"
-            />
-            <div>
-              <label className="text-sm font-bold text-ink/78" htmlFor="relationship">
-                Relationship to patient
-              </label>
-              <select
-                id="relationship"
-                value={values.relationship}
-                onBlur={() => setTouched((current) => ({ ...current, relationship: true }))}
-                onChange={(event) => updateField('relationship', event.target.value)}
-                className={`focus-ring mt-2 w-full rounded-2xl border bg-white px-4 py-3 text-sm font-medium text-ink shadow-sm transition ${
-                  showError('relationship') ? 'border-red-400' : 'border-moss/15'
-                }`}
-              >
-                <option value="">Select one</option>
-                {content.form.relationships.map((relationship) => (
-                  <option key={relationship}>{relationship}</option>
-                ))}
-              </select>
-              {showError('relationship') && <p className="mt-2 text-sm font-semibold text-red-600">{errors.relationship}</p>}
+            {/* Static-site inquiries open the visitor's email client instead of pretending to send to a backend. */}
+            <div className="grid gap-5 sm:grid-cols-2">
+              <Field
+                label="Full name"
+                value={values.fullName}
+                error={showError('fullName') ? errors.fullName : undefined}
+                onBlur={() => setTouched((current) => ({ ...current, fullName: true }))}
+                onChange={(value) => updateField('fullName', value)}
+                placeholder="Juan Dela Cruz"
+              />
+              <Field
+                label="Contact number"
+                value={values.phone}
+                error={showError('phone') ? errors.phone : undefined}
+                onBlur={() => setTouched((current) => ({ ...current, phone: true }))}
+                onChange={(value) => updateField('phone', value)}
+                placeholder="+63 900 000 0000"
+                inputMode="tel"
+              />
+              <Field
+                label="Email"
+                value={values.email}
+                error={showError('email') ? errors.email : undefined}
+                onBlur={() => setTouched((current) => ({ ...current, email: true }))}
+                onChange={(value) => updateField('email', value)}
+                placeholder="name@email.com"
+                type="email"
+              />
+              <div>
+                <label className="text-sm font-bold text-ink/78" htmlFor="relationship">
+                  Relationship to patient
+                </label>
+                <select
+                  id="relationship"
+                  value={values.relationship}
+                  onBlur={() => setTouched((current) => ({ ...current, relationship: true }))}
+                  onChange={(event) => updateField('relationship', event.target.value)}
+                  className={`focus-ring mt-2 w-full rounded-2xl border bg-white px-4 py-3 text-sm font-medium text-ink shadow-sm transition ${
+                    showError('relationship') ? 'border-red-400' : 'border-moss/15'
+                  }`}
+                >
+                  <option value="">Select one</option>
+                  {content.form.relationships.map((relationship) => (
+                    <option key={relationship}>{relationship}</option>
+                  ))}
+                </select>
+                {showError('relationship') && <p className="mt-2 text-sm font-semibold text-red-600">{errors.relationship}</p>}
+              </div>
             </div>
-          </div>
 
-          <div className="mt-5">
-            <label className="text-sm font-bold text-ink/78" htmlFor="message">
-              Message
-            </label>
-            <textarea
-              id="message"
-              value={values.message}
-              onBlur={() => setTouched((current) => ({ ...current, message: true }))}
-              onChange={(event) => updateField('message', event.target.value)}
-              placeholder="Tell us about the type of care you are looking for."
-              rows={5}
-              className={`focus-ring mt-2 w-full resize-none rounded-2xl border bg-white px-4 py-3 text-sm font-medium leading-7 text-ink shadow-sm transition ${
-                showError('message') ? 'border-red-400' : 'border-moss/15'
-              }`}
-            />
-            {showError('message') && <p className="mt-2 text-sm font-semibold text-red-600">{errors.message}</p>}
-          </div>
+            <div className="mt-5">
+              <label className="text-sm font-bold text-ink/78" htmlFor="message">
+                Message
+              </label>
+              <textarea
+                id="message"
+                value={values.message}
+                onBlur={() => setTouched((current) => ({ ...current, message: true }))}
+                onChange={(event) => updateField('message', event.target.value)}
+                placeholder="Tell us about the type of care you are looking for."
+                rows={5}
+                className={`focus-ring mt-2 w-full resize-none rounded-2xl border bg-white px-4 py-3 text-sm font-medium leading-7 text-ink shadow-sm transition ${
+                  showError('message') ? 'border-red-400' : 'border-moss/15'
+                }`}
+              />
+              {showError('message') && <p className="mt-2 text-sm font-semibold text-red-600">{errors.message}</p>}
+            </div>
 
             <button
               type="submit"
               className="focus-ring button-glow mt-6 w-full rounded-full bg-moss px-6 py-4 text-base font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-ink"
             >
-              <span className="relative z-10">Send Inquiry</span>
+              <span className="relative z-10">Open Email Inquiry</span>
             </button>
 
             {submitted && (
@@ -201,6 +203,22 @@ function Contact({ content, site }: ContactProps) {
       </div>
     </section>
   );
+}
+
+function buildInquiryMailto(site: SiteSettings, values: FormValues) {
+  const recipient = site.contact.emailHref.replace(/^mailto:/i, '').split('?')[0] || site.contact.email;
+  const subject = `Website inquiry from ${values.fullName.trim()}`;
+  const body = [
+    `Full name: ${values.fullName.trim()}`,
+    `Contact number: ${values.phone.trim()}`,
+    `Email: ${values.email.trim()}`,
+    `Relationship to patient: ${values.relationship}`,
+    '',
+    'Message:',
+    values.message.trim(),
+  ].join('\n');
+
+  return `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 
 type FieldProps = {

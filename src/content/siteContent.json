@@ -29,13 +29,13 @@
         "Guardian",
         "Other relative"
       ],
-      "successMessage": "Thank you. This demo form is ready for a backend or email integration."
+      "successMessage": "Your email app should open with your inquiry ready to send to St. Jude's."
     }
   },
   "facilities": {
     "eyebrow": "Facilities and environment",
     "heading": "Clean, peaceful spaces designed to feel supportive and safe.",
-    "copy": "Replace these placeholders with real facility photos when available. The current layout keeps the page polished while showing the type of atmosphere families should expect.",
+    "copy": "A calm, orderly environment with restful areas, shared spaces, and peaceful corners that support daily routines and family visits.",
     "spaces": [
       {
         "icon": "moon",
@@ -67,10 +67,10 @@
     "logoAlt": "St. Jude's Psychiatric and Custodial Home logo",
     "contact": {
       "phone": "+63 9623916695",
-      "phoneHref": "tel:+630000000000",
+      "phoneHref": "tel:+639623916695",
       "email": "stjudes50@gmail.com",
       "emailHref": "mailto:stjudes50@gmail.com",
-      "address": "Add complete facility address here"
+      "address": ""
     }
   },
   "about": {
@@ -204,7 +204,7 @@
   "services": {
     "eyebrow": "Services",
     "heading": "Professional support shaped around each resident's daily needs.",
-    "copy": "These core services can be customized as your real program details, licenses, staffing model, and facility policies are finalized.",
+    "copy": "Core support is coordinated around each resident's care needs, daily routines, family communication, and professional supervision.",
     "items": [
       {
         "icon": "brain",

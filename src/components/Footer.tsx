@@ -6,6 +6,8 @@ type FooterProps = {
 };
 
 function Footer({ content, site }: FooterProps) {
+  const contactDetails = [site.contact.phone, site.contact.email, site.contact.address].filter((detail) => detail.trim());
+
   return (
     <footer className="bg-ink py-12 text-white">
       <div className="section-shell grid gap-10 md:grid-cols-[1.2fr_0.8fr_1fr]">
@@ -40,9 +42,9 @@ function Footer({ content, site }: FooterProps) {
         <div>
           <h3 className="text-sm font-bold uppercase tracking-[0.18em] text-white/48">Contact</h3>
           <div className="mt-4 space-y-3 text-sm leading-7 text-white/70">
-            <p>{site.contact.phone}</p>
-            <p>{site.contact.email}</p>
-            <p>{site.contact.address}</p>
+            {contactDetails.map((detail) => (
+              <p key={detail}>{detail}</p>
+            ))}
           </div>
         </div>
       </div>
