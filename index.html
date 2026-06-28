@@ -7,6 +7,21 @@
       name="description"
       content="St. Jude's Psychiatric and Custodial Home provides compassionate psychiatric and long-term custodial care in a safe, family-centered setting."
     />
+    <link rel="icon" type="image/png" href="/stjude-logo.png" />
+    <link rel="apple-touch-icon" href="/stjude-logo.png" />
+    <script>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem('stjude-theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : prefersDark ? 'dark' : 'light';
+          document.documentElement.classList.toggle('dark', theme === 'dark');
+          document.documentElement.style.colorScheme = theme;
+        } catch {
+          document.documentElement.style.colorScheme = 'light';
+        }
+      })();
+    </script>
     <title>St. Jude's Psychiatric and Custodial Home</title>
   </head>
   <body>

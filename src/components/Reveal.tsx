@@ -8,6 +8,7 @@ type RevealProps = {
 
 function Reveal({ children, className = '', delay = 0 }: RevealProps) {
   const ref = useRef<HTMLDivElement | null>(null);
+  const hasRevealed = useRef(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -16,7 +17,9 @@ function Reveal({ children, className = '', delay = 0 }: RevealProps) {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (!entry.isIntersecting) return;
+        if (!entry.isIntersecting || hasRevealed.current) return;
+
+        hasRevealed.current = true;
         setIsVisible(true);
         observer.unobserve(entry.target);
       },
@@ -29,7 +32,11 @@ function Reveal({ children, className = '', delay = 0 }: RevealProps) {
   }, []);
 
   return (
-    <div ref={ref} className={`reveal ${isVisible ? 'is-visible' : ''} ${className}`} style={{ transitionDelay: `${delay}ms` }}>
+    <div
+      ref={ref}
+      className={`reveal ${isVisible ? 'is-visible' : ''} ${className}`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
       {children}
     </div>
   );

@@ -8,9 +8,16 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-FROM caddy:2-alpine
+FROM node:22-alpine
 
 ENV PORT=8080
+ENV NODE_ENV=production
+ENV STATIC_DIR=/app/dist
+ENV SITE_URL=https://st-jude-landing-page-production.up.railway.app
 
-COPY Caddyfile /etc/caddy/Caddyfile
-COPY --from=build /app/dist /usr/share/caddy
+WORKDIR /app
+
+COPY --from=build /app/dist ./dist
+COPY server ./server
+
+CMD ["node", "server/server.mjs"]

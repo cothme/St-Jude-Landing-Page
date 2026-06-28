@@ -9,7 +9,7 @@ function Footer({ content, site }: FooterProps) {
   const contactDetails = [site.contact.phone, site.contact.email, site.contact.address].filter((detail) => detail.trim());
 
   return (
-    <footer className="bg-ink py-12 text-white">
+    <footer className="bg-ink py-12 text-white transition-colors duration-300 dark:bg-[#050d05]">
       <div className="section-shell grid gap-10 md:grid-cols-[1.2fr_0.8fr_1fr]">
         <div>
           <div className="flex items-center gap-3">

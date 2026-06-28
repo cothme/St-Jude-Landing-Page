@@ -87,7 +87,7 @@ function Contact({ content, site }: ContactProps) {
   const showError = (field: keyof FormValues) => Boolean(touched[field] && errors[field]);
 
   return (
-    <section id="contact" className="bg-white py-20 sm:py-24">
+    <section id="contact" className="bg-white py-20 transition-colors duration-300 sm:py-24 dark:bg-[#0a180a]">
       <div className="section-shell grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
         <Reveal>
           <span className="eyebrow">{content.eyebrow}</span>
@@ -100,13 +100,13 @@ function Contact({ content, site }: ContactProps) {
               const detail = site.contact[item.detailKey];
               return (
                 <Reveal key={item.title} delay={index * 90}>
-                  <div className="card-sheen flex gap-4 rounded-3xl border border-moss/10 bg-cream p-5 transition duration-300 hover:-translate-y-1 hover:border-sage/40 hover:shadow-soft">
-                    <span className="relative grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-mist text-harbor">
+                  <div className="card-sheen flex gap-4 rounded-3xl border border-moss/10 bg-cream p-5 transition duration-300 hover:-translate-y-1 hover:border-sage/40 hover:shadow-soft dark:border-white/10 dark:bg-white/10 dark:hover:border-linen/25">
+                    <span className="relative grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-mist text-harbor dark:bg-linen/10 dark:text-linen">
                       <Icon aria-hidden="true" />
                     </span>
                     <div className="relative">
-                      <p className="text-sm font-bold uppercase tracking-[0.16em] text-ink/46">{item.title}</p>
-                      <p className="mt-1 font-semibold text-ink/78">{detail}</p>
+                      <p className="text-sm font-bold uppercase tracking-[0.16em] text-ink/46 dark:text-white/48">{item.title}</p>
+                      <p className="mt-1 font-semibold text-ink/78 dark:text-white/78">{detail}</p>
                     </div>
                   </div>
                 </Reveal>
@@ -116,7 +116,7 @@ function Contact({ content, site }: ContactProps) {
         </Reveal>
 
         <Reveal delay={120}>
-          <form onSubmit={handleSubmit} noValidate className="rounded-[2rem] border border-moss/10 bg-cream p-5 shadow-lift sm:p-8">
+          <form onSubmit={handleSubmit} noValidate className="rounded-[2rem] border border-moss/10 bg-cream p-5 shadow-lift transition-colors duration-300 dark:border-white/10 dark:bg-white/10 sm:p-8">
             {/* Static-site inquiries open the visitor's email client instead of pretending to send to a backend. */}
             <div className="grid gap-5 sm:grid-cols-2">
               <Field
@@ -146,7 +146,7 @@ function Contact({ content, site }: ContactProps) {
                 type="email"
               />
               <div>
-                <label className="text-sm font-bold text-ink/78" htmlFor="relationship">
+                <label className="text-sm font-bold text-ink/78 dark:text-white/78" htmlFor="relationship">
                   Relationship to patient
                 </label>
                 <select
@@ -154,8 +154,8 @@ function Contact({ content, site }: ContactProps) {
                   value={values.relationship}
                   onBlur={() => setTouched((current) => ({ ...current, relationship: true }))}
                   onChange={(event) => updateField('relationship', event.target.value)}
-                  className={`focus-ring mt-2 w-full rounded-2xl border bg-white px-4 py-3 text-sm font-medium text-ink shadow-sm transition ${
-                    showError('relationship') ? 'border-red-400' : 'border-moss/15'
+                  className={`focus-ring mt-2 w-full rounded-2xl border bg-white px-4 py-3 text-sm font-medium text-ink shadow-sm transition dark:bg-[#102410] dark:text-white ${
+                    showError('relationship') ? 'border-red-400 dark:border-red-300' : 'border-moss/15 dark:border-linen/20'
                   }`}
                 >
                   <option value="">Select one</option>
@@ -163,12 +163,12 @@ function Contact({ content, site }: ContactProps) {
                     <option key={relationship}>{relationship}</option>
                   ))}
                 </select>
-                {showError('relationship') && <p className="mt-2 text-sm font-semibold text-red-600">{errors.relationship}</p>}
+                {showError('relationship') && <p className="mt-2 text-sm font-semibold text-red-600 dark:text-red-300">{errors.relationship}</p>}
               </div>
             </div>
 
             <div className="mt-5">
-              <label className="text-sm font-bold text-ink/78" htmlFor="message">
+              <label className="text-sm font-bold text-ink/78 dark:text-white/78" htmlFor="message">
                 Message
               </label>
               <textarea
@@ -178,22 +178,22 @@ function Contact({ content, site }: ContactProps) {
                 onChange={(event) => updateField('message', event.target.value)}
                 placeholder="Tell us about the type of care you are looking for."
                 rows={5}
-                className={`focus-ring mt-2 w-full resize-none rounded-2xl border bg-white px-4 py-3 text-sm font-medium leading-7 text-ink shadow-sm transition ${
-                  showError('message') ? 'border-red-400' : 'border-moss/15'
+                className={`focus-ring mt-2 w-full resize-none rounded-2xl border bg-white px-4 py-3 text-sm font-medium leading-7 text-ink shadow-sm transition placeholder:text-ink/42 dark:bg-[#102410] dark:text-white dark:placeholder:text-white/38 ${
+                  showError('message') ? 'border-red-400 dark:border-red-300' : 'border-moss/15 dark:border-linen/20'
                 }`}
               />
-              {showError('message') && <p className="mt-2 text-sm font-semibold text-red-600">{errors.message}</p>}
+              {showError('message') && <p className="mt-2 text-sm font-semibold text-red-600 dark:text-red-300">{errors.message}</p>}
             </div>
 
             <button
               type="submit"
-              className="focus-ring button-glow mt-6 w-full rounded-full bg-moss px-6 py-4 text-base font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-ink"
+              className="focus-ring button-glow mt-6 w-full rounded-full bg-moss px-6 py-4 text-base font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-ink dark:bg-linen dark:text-ink dark:hover:bg-white"
             >
               <span className="relative z-10">Open Email Inquiry</span>
             </button>
 
             {submitted && (
-              <div className="animate-fade-up mt-5 flex gap-3 rounded-2xl border border-sage/30 bg-white p-4 text-sm font-semibold text-moss">
+              <div className="animate-fade-up mt-5 flex gap-3 rounded-2xl border border-sage/30 bg-white p-4 text-sm font-semibold text-moss dark:border-linen/25 dark:bg-white/10 dark:text-linen">
                 <FaRegCircleCheck className="mt-0.5 shrink-0" aria-hidden="true" />
                 {content.form.successMessage}
               </div>
@@ -237,7 +237,7 @@ function Field({ label, value, onChange, onBlur, error, placeholder, type = 'tex
 
   return (
     <div>
-      <label className="text-sm font-bold text-ink/78" htmlFor={id}>
+      <label className="text-sm font-bold text-ink/78 dark:text-white/78" htmlFor={id}>
         {label}
       </label>
       <input
@@ -248,11 +248,11 @@ function Field({ label, value, onChange, onBlur, error, placeholder, type = 'tex
         onBlur={onBlur}
         onChange={(event) => onChange(event.target.value)}
         placeholder={placeholder}
-        className={`focus-ring mt-2 w-full rounded-2xl border bg-white px-4 py-3 text-sm font-medium text-ink shadow-sm transition ${
-          error ? 'border-red-400' : 'border-moss/15'
+        className={`focus-ring mt-2 w-full rounded-2xl border bg-white px-4 py-3 text-sm font-medium text-ink shadow-sm transition placeholder:text-ink/42 dark:bg-[#102410] dark:text-white dark:placeholder:text-white/38 ${
+          error ? 'border-red-400 dark:border-red-300' : 'border-moss/15 dark:border-linen/20'
         }`}
       />
-      {error && <p className="mt-2 text-sm font-semibold text-red-600">{error}</p>}
+      {error && <p className="mt-2 text-sm font-semibold text-red-600 dark:text-red-300">{error}</p>}
     </div>
   );
 }

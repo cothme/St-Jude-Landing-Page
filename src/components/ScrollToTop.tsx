@@ -25,7 +25,7 @@ function ScrollToTop() {
       aria-label="Scroll back to top"
       onClick={scrollToTop}
       style={{ bottom: '1.5rem', left: 'auto', position: 'fixed', right: '1.5rem' }}
-      className={`focus-ring button-glow z-[9999] grid h-12 w-12 place-items-center rounded-full bg-moss text-white shadow-lift transition duration-300 hover:-translate-y-1 hover:bg-ink sm:h-14 sm:w-14 ${
+      className={`focus-ring button-glow z-[9999] grid h-12 w-12 place-items-center rounded-full bg-moss text-white shadow-lift transition duration-300 hover:-translate-y-1 hover:bg-ink dark:bg-linen dark:text-ink dark:hover:bg-white sm:h-14 sm:w-14 ${
         isVisible ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none translate-y-4 opacity-0'
       }`}
     >

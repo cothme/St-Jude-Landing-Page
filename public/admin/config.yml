@@ -3,6 +3,9 @@ backend:
   repo: cothme/St-Jude-Landing-Page
   branch: main
   squash_merges: true
+  base_url: https://st-jude-landing-page-production.up.railway.app
+  auth_endpoint: auth
+  # Keep Open Authoring disabled so GitHub users without repo write access cannot submit edits through the CMS.
 
 # Local proxy support is only used on localhost by Decap CMS.
 local_backend: true
