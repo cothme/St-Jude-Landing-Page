@@ -61,6 +61,10 @@ section {
   will-change: opacity, transform;
 }
 
+.reveal[data-reveal-direction='up'] {
+  transform: translateY(-24px);
+}
+
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
