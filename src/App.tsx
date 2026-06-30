@@ -6,6 +6,7 @@ import Facilities from './components/Facilities';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
+import PrivacyPolicy from './components/PrivacyPolicy';
 import ScrollToTop from './components/ScrollToTop';
 import Services from './components/Services';
 import WhyChooseUs from './components/WhyChooseUs';
@@ -59,6 +60,7 @@ function App() {
         <WhyChooseUs content={siteContent.whyChooseUs} />
         <Facilities content={siteContent.facilities} />
         <Contact content={siteContent.contact} site={siteContent.site} />
+        <PrivacyPolicy content={siteContent.privacyPolicy} />
       </main>
       <Footer content={siteContent.footer} site={siteContent.site} />
       <ScrollToTop />

@@ -33,7 +33,7 @@ function Navbar({ navigation, site, theme, onToggleTheme }: NavbarProps) {
           </span>
         </a>
 
-        <div className="hidden items-center gap-7 lg:flex">
+        <div className="hidden items-center gap-5 xl:gap-7 lg:flex">
           {navigation.map((item) => (
             <a
               key={item.href}

@@ -118,6 +118,10 @@
     {
       "label": "Contact",
       "href": "#contact"
+    },
+    {
+      "label": "Privacy",
+      "href": "#privacy-policy"
     }
   ],
   "hero": {
@@ -185,9 +189,57 @@
       {
         "label": "Inquire",
         "href": "#contact"
+      },
+      {
+        "label": "Privacy",
+        "href": "#privacy-policy"
       }
     ],
     "copyright": "All rights reserved."
+  },
+  "privacyPolicy": {
+    "eyebrow": "Privacy policy",
+    "heading": "How we handle website, Messenger, and care inquiry information.",
+    "copy": "St. Jude's treats personal, Messenger, and care-related information with respect, confidentiality, and appropriate safeguards. This policy explains what information may be collected through the website, Facebook Messenger, and direct inquiries, and how it may be used to answer basic questions or guide families seeking care.",
+    "lastUpdated": "June 30, 2026",
+    "sections": [
+      {
+        "title": "Website inquiry information",
+        "copy": "When you use the website inquiry form or contact us directly, we may collect details you choose to share, such as your name, contact information, relationship to the prospective resident, inquiry message, and care concerns needed to respond appropriately."
+      },
+      {
+        "title": "Messenger bot information",
+        "copy": "If you message St. Jude's through Facebook Messenger, we may receive your Messenger user ID or page-scoped ID, message text, attachments you send, timestamps, and basic profile details made available by Meta so we can reply to your conversation."
+      },
+      {
+        "title": "How we use information",
+        "copy": "We use information to answer basic questions, respond to inquiries, coordinate next steps, discuss availability, prepare for admissions conversations, and communicate with families about services or care-related concerns."
+      },
+      {
+        "title": "OpenAI bot processing",
+        "copy": "Messenger messages may be sent to OpenAI or similar service providers to generate a helpful response. The bot is for basic questions only and should not be used for diagnosis, emergency support, or medical decisions."
+      },
+      {
+        "title": "Sensitive details",
+        "copy": "Please share only the health or personal information needed for your inquiry. More detailed care information should be discussed directly with authorized St. Jude's staff, not through a public social messaging channel."
+      },
+      {
+        "title": "Sharing and disclosure",
+        "copy": "St. Jude's does not sell personal information, Messenger data, or inquiry content. We do not use Messenger data for third-party advertising. Information may be shared only with authorized staff, service providers that support operations, Meta/OpenAI platform services needed to run the bot, or when required by law or safety needs."
+      },
+      {
+        "title": "Retention and safeguards",
+        "copy": "Inquiry and Messenger conversation details are kept only as long as needed for replies, care coordination, legal obligations, security, or operational records, and are handled with reasonable administrative and technical safeguards."
+      },
+      {
+        "title": "Access, correction, and deletion",
+        "copy": "You may ask St. Jude's to access, correct, update, or delete your personal information where applicable. To request deletion of Messenger bot data, message us with \"delete my data\" or email stjudes50@gmail.com with enough details to identify your conversation."
+      }
+    ],
+    "contactCta": {
+      "label": "Contact Us",
+      "href": "#contact"
+    }
   },
   "whyChooseUs": {
     "eyebrow": "Why choose us",

@@ -12,6 +12,7 @@ export type SiteContent = {
   whyChooseUs: WhyChooseUsContent;
   facilities: FacilitiesContent;
   contact: ContactContent;
+  privacyPolicy: PrivacyPolicyContent;
   footer: FooterContent;
 };
 
@@ -118,6 +119,18 @@ export type ContactContent = {
     relationships: string[];
     successMessage: string;
   };
+};
+
+export type PrivacyPolicyContent = {
+  eyebrow: string;
+  heading: string;
+  copy: string;
+  lastUpdated: string;
+  sections: {
+    title: string;
+    copy: string;
+  }[];
+  contactCta: CtaContent;
 };
 
 export type FooterContent = {
