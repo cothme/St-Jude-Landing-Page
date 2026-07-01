@@ -19,5 +19,6 @@ WORKDIR /app
 
 COPY --from=build /app/dist ./dist
 COPY server ./server
+COPY --from=build /app/src/content ./src/content
 
 CMD ["node", "server/server.mjs"]

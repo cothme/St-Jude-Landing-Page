@@ -306,6 +306,22 @@ collections:
                   - { name: label, label: Label, widget: string }
                   - { name: href, label: Link, widget: string }
 
+          - name: chatAssistant
+            label: Chat Assistant
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: subtitle, label: Subtitle, widget: text }
+              - { name: greeting, label: Greeting, widget: text }
+              - { name: inputPlaceholder, label: Input Placeholder, widget: string }
+              - {
+                  name: quickPrompts,
+                  label: Quick Prompts,
+                  widget: list,
+                  field: { name: prompt, label: Prompt, widget: string },
+                }
+              - { name: unavailableMessage, label: Unavailable Message, widget: text }
+
           - name: footer
             label: Footer
             widget: object

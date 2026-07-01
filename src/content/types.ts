@@ -13,6 +13,7 @@ export type SiteContent = {
   facilities: FacilitiesContent;
   contact: ContactContent;
   privacyPolicy: PrivacyPolicyContent;
+  chatAssistant: ChatAssistantContent;
   footer: FooterContent;
 };
 
@@ -131,6 +132,15 @@ export type PrivacyPolicyContent = {
     copy: string;
   }[];
   contactCta: CtaContent;
+};
+
+export type ChatAssistantContent = {
+  title: string;
+  subtitle: string;
+  greeting: string;
+  inputPlaceholder: string;
+  quickPrompts: string[];
+  unavailableMessage: string;
 };
 
 export type FooterContent = {

@@ -4,7 +4,9 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "node server/dev.mjs",
+    "dev:web": "vite --configLoader runner",
+    "dev:api": "node server/server.mjs",
     "cms:local": "npx decap-server",
     "validate:content": "node scripts/validate-site-content.mjs",
     "build": "npm run validate:content && tsc -b && vite build",

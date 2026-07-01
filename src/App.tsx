@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import About from './components/About';
+import ChatAssistant from './components/ChatAssistant';
 import Contact from './components/Contact';
 import CursorGradient from './components/CursorGradient';
 import Facilities from './components/Facilities';
@@ -63,6 +64,7 @@ function App() {
         <PrivacyPolicy content={siteContent.privacyPolicy} />
       </main>
       <Footer content={siteContent.footer} site={siteContent.site} />
+      <ChatAssistant content={siteContent.chatAssistant} />
       <ScrollToTop />
     </div>
   );

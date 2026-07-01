@@ -241,6 +241,19 @@
       "href": "#contact"
     }
   },
+  "chatAssistant": {
+    "title": "St. Jude's Assistant",
+    "subtitle": "Ask about services, consultation, location, internship, or patient accommodation.",
+    "greeting": "Hello, this is St. Jude's Psychiatric and Custodial Home. How can I help?",
+    "inputPlaceholder": "Type your question...",
+    "quickPrompts": [
+      "What are your office hours?",
+      "Where are you located?",
+      "Can I ask about patient accommodation?",
+      "How can I contact staff?"
+    ],
+    "unavailableMessage": "Online chat is not connected yet. Please call +63 9623916695 or use the contact form while the chat server is being configured."
+  },
   "whyChooseUs": {
     "eyebrow": "Why choose us",
     "heading": "A place families can trust during a sensitive season.",
